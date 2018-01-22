@@ -150,16 +150,17 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\BooksController.cs" />
     <Compile Include="Controllers\CategoriesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\Author.cs">
-      <DependentUpon>BookReviewModel.tt</DependentUpon>
+      <DependentUpon>BookReviewModel2.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Book.cs">
-      <DependentUpon>BookReviewModel.tt</DependentUpon>
+      <DependentUpon>BookReviewModel2.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\BookReviewModel.Context.cs">
       <AutoGen>True</AutoGen>
@@ -176,17 +177,32 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>BookReviewModel.edmx</DependentUpon>
     </Compile>
+    <Compile Include="Models\BookReviewModel2.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BookReviewModel2.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\BookReviewModel2.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BookReviewModel2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\BookReviewModel2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BookReviewModel2.edmx</DependentUpon>
+    </Compile>
     <Compile Include="Models\Category.cs">
-      <DependentUpon>BookReviewModel.tt</DependentUpon>
+      <DependentUpon>BookReviewModel2.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\CheckinLog.cs">
-      <DependentUpon>BookReviewModel.tt</DependentUpon>
+      <DependentUpon>BookReviewModel2.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Review.cs">
-      <DependentUpon>BookReviewModel.tt</DependentUpon>
+      <DependentUpon>BookReviewModel2.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Reviewer.cs">
-      <DependentUpon>BookReviewModel.tt</DependentUpon>
+      <DependentUpon>BookReviewModel2.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -207,6 +223,16 @@
       <DependentUpon>BookReviewModel.edmx</DependentUpon>
       <LastGenOutput>BookReviewModel.cs</LastGenOutput>
     </Content>
+    <Content Include="Models\BookReviewModel2.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>BookReviewModel2.edmx</DependentUpon>
+      <LastGenOutput>BookReviewModel2.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\BookReviewModel2.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>BookReviewModel2.edmx</DependentUpon>
+      <LastGenOutput>BookReviewModel2.cs</LastGenOutput>
+    </Content>
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="ApplicationInsights.config">
@@ -218,6 +244,13 @@
     </EntityDeploy>
     <Content Include="Models\BookReviewModel.edmx.diagram">
       <DependentUpon>BookReviewModel.edmx</DependentUpon>
+    </Content>
+    <EntityDeploy Include="Models\BookReviewModel2.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>BookReviewModel2.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\BookReviewModel2.edmx.diagram">
+      <DependentUpon>BookReviewModel2.edmx</DependentUpon>
     </Content>
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
@@ -249,6 +282,11 @@
     <Content Include="Views\Categories\Details.cshtml" />
     <Content Include="Views\Categories\Edit.cshtml" />
     <Content Include="Views\Categories\Index.cshtml" />
+    <Content Include="Views\Books\Create.cshtml" />
+    <Content Include="Views\Books\Delete.cshtml" />
+    <Content Include="Views\Books\Details.cshtml" />
+    <Content Include="Views\Books\Edit.cshtml" />
+    <Content Include="Views\Books\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
